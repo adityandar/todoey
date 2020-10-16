@@ -18,9 +18,33 @@ class _TasksListState extends State<TasksList> {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        TaskTile(name: tasks[0].name, isChecked: tasks[0].isDone),
-        TaskTile(name: tasks[1].name, isChecked: tasks[1].isDone),
-        TaskTile(name: tasks[2].name, isChecked: tasks[2].isDone),
+        TaskTile(
+          name: tasks[0].name,
+          isChecked: tasks[0].isDone,
+          onChanged: (newValue) {
+            setState(() {
+              tasks[0].toggle();
+            });
+          },
+        ),
+        TaskTile(
+          name: tasks[1].name,
+          isChecked: tasks[1].isDone,
+          onChanged: (newValue) {
+            setState(() {
+              tasks[1].toggle();
+            });
+          },
+        ),
+        TaskTile(
+          name: tasks[2].name,
+          isChecked: tasks[2].isDone,
+          onChanged: (newValue) {
+            setState(() {
+              tasks[2].toggle();
+            });
+          },
+        ),
       ],
     );
   }
