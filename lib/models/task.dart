@@ -6,6 +6,5 @@ class Task {
 
   void toggle() {
     isDone = !isDone;
-    print('ashiap');
   }
 }

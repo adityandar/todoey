@@ -92,9 +92,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: TasksList(
-                tasks,
-              ),
+              child: TasksList(tasks),
             ),
           ),
         ],
